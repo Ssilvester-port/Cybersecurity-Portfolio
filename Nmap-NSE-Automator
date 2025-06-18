@@ -1,0 +1,47 @@
+# 🔢 Nmap NSE Automator
+
+## 🔍 Overview
+This project automates common Nmap scans using Nmap Scripting Engine (NSE). It allows quick vulnerability assessments using categorized script sets.
+
+## 📁 Features
+- Predefined profiles (vuln, safe, full, top100)
+- HTML and grepable output
+- Option to scan multiple hosts from a file
+
+## 🔧 Tools Used
+- Nmap (with NSE scripts)
+- Bash (or Python version planned)
+
+## 🔧 Setup & Usage
+1. Install Nmap:
+   ```bash
+   sudo apt install nmap
+   ```
+2. Run script:
+   ```bash
+   ./nmap_automator.sh -t 192.168.1.100 -p vuln
+   ```
+3. View report:
+   ```
+   cat output/192.168.1.100_vuln.html
+   ```
+
+## 📋 Scan Profiles
+- `safe`: No intrusive scans
+- `vuln`: Uses `vuln` category scripts
+- `top100`: Top 100 ports
+- `full`: Full TCP scan with scripts
+
+## 💡 What I Learned
+- Automating recon and scanning
+- Selecting proper NSE scripts by category
+- Creating simple terminal UIs
+
+## 🔗 Resources
+- [Nmap NSE Docs](https://nmap.org/nsedoc/)
+- [Nmap Cheat Sheet](https://github.com/cheat-sheet/nmap-cheat-sheet)
+
+## 🚀 Future Improvements
+- Add Python GUI version
+- Auto parse output to CSV/JSON
+- CVE linking via Vulners API
