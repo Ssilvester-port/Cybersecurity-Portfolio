@@ -1,0 +1,84 @@
+# 📡 Wireshark Capture Analysis
+
+Analyze PCAP (Packet Capture) files to identify and understand cybersecurity threats. Useful for network forensic investigations and SOC analysis.
+
+---
+
+## 🔍 Project Overview
+
+This repository contains:
+- Example PCAP files with known attacks
+- Wireshark filters and detection tips
+- Step-by-step analysis walkthroughs
+- Suricata rules for automated detection (optional)
+
+---
+
+## 🧪 Example Scenarios
+
+| Scenario | Description |
+|----------|-------------|
+| DNS Tunneling | Detect data exfiltration over DNS |
+| HTTP C2 | Find Command & Control traffic using HTTP headers |
+| FTP Login Brute Force | Identify repeated login attempts in FTP traffic |
+| Malware Download | Spot suspicious file downloads and payloads |
+
+---
+
+## 🔧 Tools Used
+
+- **Wireshark**
+- **Suricata** (optional for IDS)
+- **tcpdump** (for CLI filtering)
+
+---
+
+## 📁 Structure
+
+```
+Wireshark-Capture-Analysis/
+├── captures/
+│   ├── dns_tunnel.pcap
+│   ├── http_c2.pcap
+│   └── ftp_brute.pcap
+├── filters/
+│   ├── dns_filter.txt
+│   ├── http_command.txt
+│   └── ftp_login.txt
+├── walkthroughs/
+│   ├── DNS-Tunneling.md
+│   ├── HTTP-C2.md
+│   └── FTP-Brute-Force.md
+└── suricata-rules/
+    └── custom.rules
+```
+
+---
+
+## 📘 Sample Wireshark Filter
+
+To detect FTP brute force:
+```wireshark
+ftp.request.command == "USER" || ftp.request.command == "PASS"
+```
+
+To detect DNS tunneling:
+```wireshark
+dns.qry.name contains "."
+```
+
+---
+
+## 🧠 Learning Goals
+
+- Packet-level visibility of attacks
+- Mastery of Wireshark filters
+- Event correlation and IOC extraction
+- Use of Suricata for alerting
+
+---
+
+## 🔗 References
+
+- [Wireshark Wiki](https://wiki.wireshark.org/)
+- [Suricata Rules Documentation](https://suricata.readthedocs.io/)
