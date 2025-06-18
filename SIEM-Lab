@@ -32,9 +32,6 @@ This project simulates a Security Information and Event Management (SIEM) enviro
 - [Elastic Security Guide](https://www.elastic.co/guide/en/security/current/index.html)
 - [Splunk Security Essentials](https://splunkbase.splunk.com/app/3435/)
 
-## 📃 Screenshots
-![Dashboard Example](./images/dashboard_example.png)
-
 ## 🚀 Future Improvements
 - Integrate Suricata alerts
 - Simulate Linux logs
