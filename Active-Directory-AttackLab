@@ -1,0 +1,43 @@
+# 🕵️‍♂️ Active Directory Attack Lab
+
+## 🔍 Overview
+This lab simulates a small Active Directory environment for practicing red and blue team techniques. It includes VM setup instructions, tools, and guided exercises for lateral movement, privilege escalation, and defense.
+
+## 📁 Lab Topology
+- 1x Domain Controller (Windows Server 2019)
+- 1x Client (Windows 10)
+- Optional: Kali Linux attacker machine
+
+## 🔧 Tools Used
+- BloodHound + SharpHound
+- Mimikatz
+- PowerView / PowerSploit
+- Sysmon + Windows Event Logs
+- AD DS, DNS, GPO (built-in tools)
+
+## 🚪 Red Team Activities
+- Enumerate domain trusts & ACLs
+- Abuse misconfigured ACLs with PowerView
+- Use Mimikatz for credential dumping
+- Perform DCSync attack
+
+## 🛡️ Blue Team Detections
+- Enable Sysmon and forward logs to SIEM
+- Detect unusual PowerShell activity
+- Monitor group membership changes
+
+## ♻️ Setup Guide
+1. Create VMs using VirtualBox or VMware
+2. Promote Windows Server to Domain Controller
+3. Join client machine to the domain
+4. Install tools (in `/tools/` directory)
+
+## 🔗 Resources
+- [BloodHound Docs](https://bloodhound.readthedocs.io)
+- [Harmj0y PowerView](https://github.com/PowerShellMafia/PowerSploit)
+- [Sysmon Config](https://github.com/SwiftOnSecurity/sysmon-config)
+
+## 🚀 Future Improvements
+- Add Linux + LDAP simulation
+- Add Defender EDR telemetry integration
+- Simulate Rubeus and Kerberoasting attacks
