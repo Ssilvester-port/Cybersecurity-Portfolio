@@ -1,0 +1,69 @@
+# 📚 SOC Playbooks
+
+A collection of incident response (IR) playbooks for common security events in a Security Operations Center (SOC). Each playbook includes steps for identification, containment, eradication, recovery, and lessons learned.
+
+---
+
+## 🧰 What’s Included
+
+- Markdown-based IR playbooks
+- MITRE ATT&CK mappings
+- IOC templates and enrichment examples
+- Detection tips and log sources
+
+---
+
+## 🛠️ Folder Structure
+```
+SOC-Playbooks/
+├── phishing_playbook.md
+├── ransomware_playbook.md
+├── insider_threat_playbook.md
+├── incident_summary_template.md
+└── mitre_mapping.md
+```
+
+---
+
+## 📄 Example Playbooks
+
+### 1. `phishing_playbook.md`
+- ✅ Identify suspicious email (headers, links)
+- 🧪 Analyze attachments (VirusTotal)
+- 🔒 Block URLs/IPs (firewall/proxy)
+- 📬 Notify affected users and reset passwords
+- 🧠 Map to MITRE T1566.001 (Spearphishing Attachment)
+
+### 2. `ransomware_playbook.md`
+- 🚨 Detect encryption behavior (file extension spikes)
+- 📛 Isolate host from network
+- 🔁 Restore backups
+- 📊 Generate IOC report
+- 🧠 MITRE Mapping: T1486 (Data Encrypted for Impact)
+
+### 3. `insider_threat_playbook.md`
+- 🔍 Review anomalous login/transfer activity
+- 📈 Audit logs and DLP alerts
+- 👤 Interview or report to HR/security officer
+- 🧠 MITRE T1086 (PowerShell Abuse)
+
+---
+
+## 📋 Templates
+- `incident_summary_template.md`: Standard reporting format
+- `mitre_mapping.md`: Table for TTP mapping across incidents
+
+---
+
+## 📘 How to Use
+1. Pick a playbook based on the alert/incident.
+2. Follow each stage: Identify → Contain → Eradicate → Recover → Document.
+3. Use MITRE TTPs to enrich detection coverage.
+4. Store results in summary template.
+
+---
+
+## 🔗 References
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [NIST IR Guide SP 800-61](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf)
+- [DFIR Report](https://thedfirreport.com)
