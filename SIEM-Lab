@@ -1,0 +1,41 @@
+# 📊 SIEM-Lab
+
+## 🔍 Overview
+This project simulates a Security Information and Event Management (SIEM) environment. It collects logs from Windows endpoints and correlates them using Splunk or the Elastic Stack to detect common attack patterns.
+
+## 📁 Features
+- Simulated log generation (Windows Sysmon, PowerShell logs)
+- Integration with Splunk or Elastic Stack
+- Dashboards for:
+  - Brute-force detection
+  - Lateral movement
+  - Suspicious PowerShell
+
+## 🔧 Tools Used
+- Splunk (Free license or trial)
+- Elastic Stack (Filebeat, Logstash, Kibana)
+- Sysmon for Windows logging
+- Windows 10 VM or Server 2019
+
+## ♻️ Setup Guide
+1. Install Splunk or Elastic Stack on your analysis machine
+2. Configure a Windows VM with Sysmon using [SwiftOnSecurity's config](https://github.com/SwiftOnSecurity/sysmon-config)
+3. Use Winlogbeat or Filebeat to forward logs
+4. Import prebuilt dashboards from the `dashboards/` folder
+
+## 📊 Example Detections
+- Excessive failed logins
+- Remote PowerShell execution
+- Lateral movement via `PsExec`
+
+## 🔗 Resources
+- [Elastic Security Guide](https://www.elastic.co/guide/en/security/current/index.html)
+- [Splunk Security Essentials](https://splunkbase.splunk.com/app/3435/)
+
+## 📃 Screenshots
+![Dashboard Example](./images/dashboard_example.png)
+
+## 🚀 Future Improvements
+- Integrate Suricata alerts
+- Simulate Linux logs
+- Add detection rules using Sigma format
