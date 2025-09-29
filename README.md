@@ -49,9 +49,9 @@ Markdown documents with structured response plans for phishing, ransomware, and 
 
 ## 📅 Certifications & Badges
 
-- [ ] CompTIA Security+
-- [ ] TryHackMe: Blue Team Jr Path
-- [ ] Hack The Box: Starting Point
+- [ ] CompTIA Security+ - In Progress
+- [ ] TryHackMe: Blue Team Jr Path - In Progress
+- [ ] Hack The Box: Starting Point - In Progress
 
 ---
 
